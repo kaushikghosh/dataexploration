@@ -2,8 +2,8 @@
 # DBTITLE 1,Set storage configuration and explore data
 # We will first set the account name and storage key details first and get the description of columns in the sample datset
 #Set the Hadoop Azure Configuration first
-spark.conf.set("fs.azure.account.key.cs71003200157a6fbdc.blob.core.windows.net", "On1ifZ41QpxUjY7S3qzCt7g5kK1rfP+8oDJg9Fs5jzO9A50oWnVJLZi5rAJK+1EnphmCMxkUtEK1NV/tyqv1SQ==")
-file_path = "wasbs://sampleds@cs71003200157a6fbdc.blob.core.windows.net/wikipedia-2016-06-27-sampled.json"
+spark.conf.set("fs.azure.account.key.storage_name.blob.core.windows.net", "storage_key")
+file_path = "wasbs://container_name@storage_name.blob.core.windows.net/wikipedia-2016-06-27-sampled.json"
 df = spark.read.json(file_path)
 df.printSchema()
 df.show()
